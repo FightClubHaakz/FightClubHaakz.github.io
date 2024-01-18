@@ -2,7 +2,7 @@
         --primary-background-color: #1a1a1a;
         --primary-text-color: whitesmoke;
         --secondary-background-color: #2b2b2b;
-        --accent-color-1: #4e4e4e;
+        --accent-color-1: #3a3a3a;
         --accent-color-2: #757575;
         --link-color: #3498db;
         --link-hover-color: #2980b9;
@@ -17,10 +17,10 @@
     box-sizing: border-box;
 }
 body{
-    height: 200vh;
-    /*
+    height: auto;
+    /*'
     filter: invert(95%) hue-rotate(180deg);
-    */
+   */
 }
 
 nav{
@@ -61,4 +61,113 @@ nav ul li{
 #photosOfMe a:hover{
     border: 2px solid var(--border-color);
     color: var(--link-hover-color);
+    text-decoration: underline;
 } 
+
+
+#projects a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 0.5em;
+    border: 2px solid transparent;
+} 
+
+#projects a:hover{
+    border: 2px solid var(--border-color);
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+#introBox{
+    background-image: url(./photos/intro/fightClubImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid var(--border-color);
+    
+}
+
+#myName {
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 2em;
+}
+
+#introInf{
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 3em;
+    padding: 1em;
+}
+
+#aboutMeInf{
+    color: var(--primary-text-color);
+    background-color: var(--secondary-background-color);
+    text-align: center;
+    font-size: 3em;
+    padding: 1em;
+    border: 2px solid var(--border-color);
+}
+
+#lightMode{
+    background-color: whitesmoke;
+    color: var(--primary-background-color);
+    
+}
+/*
+#myProjects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "projectInfBox1 projectInfBox2 InfBox3";
+    justify-items: center;  
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    gap: 1em; 
+}
+#myProjectsText{
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 4em;
+    padding: 1em;
+    background-color: var(--accent-color-1);
+    border: 2px solid var(--border-color);
+}
+
+#projectInfBox1, #projectInfBox2, #projectInfBox3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--border-color);
+    font-size: 1em;
+}
+#projectInfBox1{
+    grid-area: projectInfBox1;
+    background-image: url(./photos/hobbyPhotos/hacker.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24vw;
+}
+
+
+
+#projectInfBox2{
+    grid-area: projectInfBox2;
+    background-image: url(./photos/hobbyPhotos/randyRhoads.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24vw;
+    height: 33vw;
+}
+
+
+
+#projectInfBox3{
+    grid-area: projectInfBox3;
+}
+
+*/
