@@ -63,11 +63,30 @@ margin: 0em;
     color: var(--link-hover-color);
 } 
 
+#projects a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 0.5em;
+    border: 2px solid transparent;
+} 
+
+#projects a:hover{
+    border: 2px solid var(--border-color);
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
 div{
-    height: 3em;
-    width: 3em;
+    height: 10em;
+    width: 100%;
 }
 #bradPitt1 {
-    width: 3em;
-    height: 3em;
+    width: 43%;
+    height: auto;
+}
+
+#lightMode{
+    background-color: whitesmoke;
+    color: var(--primary-background-color);
+    
 }
