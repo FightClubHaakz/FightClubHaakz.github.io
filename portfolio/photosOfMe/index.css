@@ -1,0 +1,133 @@
+/* index.css */
+
+:root {
+    --primary-background-color: #1a1a1a;
+    --primary-text-color: whitesmoke;
+    --secondary-background-color: #2b2b2b;
+    --accent-color-1: #4e4e4e;
+    --accent-color-2: #757575;
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+    --button-color: #e74c3c;
+    --button-hover-color: #c0392b;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin-top: 4em; /* Adjusted margin to make space for the fixed navigation bar */
+}
+
+.content-wrapper {
+    padding-top: 6em;
+    background-color: var(--secondary-background-color);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.grid-item {
+    flex: 1 1 calc(50% - 1em);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 100%;
+    }
+}
+
+nav {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    position: fixed;
+    width: 100vw;
+    top: 0; /* Ensure the navigation bar stays at the top */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 1em 0em;
+}
+
+#logo {
+    height: 4em;
+    width: auto;
+    margin-right: 1em; /* Add spacing to the right of the logo */
+}
+
+#logoContainer {
+    margin: 0em;
+}
+
+#photosLink a,
+#projectsLink a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 0.5em;
+    border: 2px solid transparent;
+}
+
+#photosLink a:hover,
+#projectsLink a:hover {
+    border: 2px solid var(--border-color);
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.grid-item div {
+    height: 100%; /* Set the height of the image container to 100% */
+}
+
+img {
+    width: 100%; /* Make the images fill their container */
+    height: auto;
+}
+
+#lightMode {
+    background-color: whitesmoke;
+    color: var(--primary-background-color);
+}
+
+#photo1Text {
+    font-size: 2em;
+    color: var(--primary-text-color);
+    margin-left: 3em;
+}
+
+.photoText {
+    color: var(--primary-text-color);
+    font-size: 2em;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 2em!important;
+    }
+}
