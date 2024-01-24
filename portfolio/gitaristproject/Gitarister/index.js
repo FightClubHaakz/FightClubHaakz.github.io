@@ -8,16 +8,18 @@ function toggleLightMode() {
 
     if (isLightMode === true) {
         document.body.style.filter = "invert(95%) hue-rotate(180deg)";
-        document.getElementById("slash").style.filter = "invert(95%) hue-rotate(180deg)";
-        document.getElementById("EVH").style.filter = "invert(95%) hue-rotate(180deg)";
-        document.getElementById("steveVai").style.filter = "invert(95%) hue-rotate(180deg)";
+        document.querySelectorAll(".guitaristImage").forEach(img => {
+            img.style.filter = "invert(95%) hue-rotate(180deg)";
+        });
+
         LMBtn.textContent = "Dark Mode";
     } else {
         document.body.style.filter = "none"; // Reset the filter
-    // Reset the filter for the specific element
-        document.getElementById("slash").style.filter = "none";
-        document.getElementById("EVH").style.filter = "none";
-        document.getElementById("steveVai").style.filter = "none";
+        // Reset the filter for all elements with class "guitaristImage"
+        document.querySelectorAll(".guitaristImage").forEach(img => {
+            img.style.filter = "none";
+        });
+
         LMBtn.textContent = "Light Mode";
     }
 }
