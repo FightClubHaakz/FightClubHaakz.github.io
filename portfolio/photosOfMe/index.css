@@ -26,7 +26,7 @@ filter: invert(95%) hue-rotate(180deg);
 
 .wrapper{
     padding-top: 6em;
-    height: 100vh;
+    height: 200vh;
     background-color: var(--secondary-background-color);
     
 }
