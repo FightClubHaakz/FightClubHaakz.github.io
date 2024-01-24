@@ -1,3 +1,5 @@
+/* guitar-heroes.css */
+
 :root {
     --darkcolor: #1d1d42;
     --whitecolor: #EEEEEE;
@@ -15,6 +17,7 @@
     --border-color: #333333;
 }
 
+/* Reset and General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +29,12 @@ body {
     height: auto;
     background-image: linear-gradient(var(--darkcolor) 10%, rgb(119, 190, 213) 90%);
 }
-.wrapper{
+
+.wrapper {
     padding-top: 4em;
 }
+
+/* Navigation Styles */
 nav {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -46,7 +52,7 @@ nav ul {
 nav ul li {
     display: flex;
     align-items: center;
-    margin: 1em 0em;
+    margin: 0em 0em;
 }
 
 #logo {
@@ -57,32 +63,22 @@ nav ul li {
     margin: 0em;
 }
 
-#photosOfMe a {
+#photosLink a,
+#projectsLink a {
     text-decoration: none;
     color: var(--primary-text-color);
     padding: 0.5em;
     border: 2px solid transparent;
 }
 
-#photosOfMe a:hover {
+#photosLink a:hover,
+#projectsLink a:hover {
     border: 2px solid var(--border-color);
     color: var(--link-hover-color);
     text-decoration: underline;
 }
 
-#projects a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-    padding: 0.5em;
-    border: 2px solid transparent;
-}
-
-#projects a:hover {
-    border: 2px solid var(--border-color);
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
+/* Content Styles */
 #bigBox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -104,29 +100,23 @@ nav ul li {
     color: var(--primary-text-color);
 }
 
-#slash,
-#EVH,
-#steveVai {
+.guitaristImage {
     height: auto;
     max-width: 70%;
     margin: 0.5em;
 }
 
-#slashHr,
-#EVHHr,
-#steveVaiHr {
+.guitaristHr {
     width: 60%;
     border: 1px solid var(--whitecolor);
 }
 
-#slashText,
-#evhText,
-#steveVaiText {
+.guitaristText {
     font-size: 2.5em;
     padding: 0.5em 1em 0em 1em;
 }
 
-#needMoreSpace {
+.needMoreSpace {
     margin-bottom: 3em;
 }
 
@@ -134,6 +124,7 @@ nav ul li {
     font-size: 2.5em;
     margin-top: 0.5em;
 }
+
 .box1 p,
 .box2 p,
 .box3 p {
@@ -142,18 +133,10 @@ nav ul li {
     padding: 1.8em 1em 0em 1em;
 }
 
-a {
-    color: var(--primary-text-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .boxLinks {
-    color:#FF10F0;
+    color: #FF10F0;
 }
+
 #lightMode {
     background-color: whitesmoke;
     color: var(--primary-background-color);
@@ -162,6 +145,8 @@ a:hover {
 .light-mode *:not(img) {
     filter: invert(95%) hue-rotate(180deg);
 }
+
+/* Footer Styles */
 footer {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -171,6 +156,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Responsive Styles */
 @media (orientation: portrait) {
     #bigBox {
         display: grid;
@@ -199,4 +186,3 @@ footer {
         margin-bottom: 0.5em 0em;
     }
 }
-
