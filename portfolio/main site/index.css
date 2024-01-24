@@ -23,6 +23,7 @@ body {
     height: auto;
 }
 
+/* Navigation Bar Styles */
 nav {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -66,6 +67,7 @@ nav ul li {
     text-decoration: underline;
 }
 
+/* Introduction Section Styles */
 #introBox {
     background-image: url(./photos/intro/fightClubImg.jpg);
     background-repeat: no-repeat;
@@ -89,6 +91,7 @@ nav ul li {
     padding-bottom: 1em;
 }
 
+/* About Me Section Styles */
 #aboutMeInf {
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
@@ -98,11 +101,13 @@ nav ul li {
     border: 2px solid var(--border-color);
 }
 
+/* Light Mode Button Styles */
 #lightMode {
     background-color: whitesmoke;
     color: var(--primary-background-color);
 }
 
+/* Footer Styles */
 footer {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -113,10 +118,9 @@ footer {
     width: 100%;
 }
 
-
-
+/* Media Query for Portrait Orientation */
 @media (orientation: portrait) {
-    #aboutMeInf{
+    #aboutMeInf {
         font-size: 1.5em;
         padding-bottom: 5em;
     }
