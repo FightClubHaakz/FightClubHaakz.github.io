@@ -9,98 +9,86 @@
     --button-color: #e74c3c;
     --button-hover-color: #c0392b;
     --border-color: #333333;
-  }
-
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body{
-height: 200vh;
-
-/*
-filter: invert(95%) hue-rotate(180deg);
-*/
 }
 
-.wrapper{
-    padding-top: 6em;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     height: 200vh;
+}
+
+.content-wrapper {
+    padding-top: 6em;
     background-color: var(--secondary-background-color);
-    
+    height: 200vh;
 }
 
-nav{
-background-color: var(--primary-background-color);
-color: var(--primary-text-color);
-position: fixed;
-width: 100vw;
-}
-nav ul{
-display: flex;
-justify-content: space-evenly;
-list-style: none;
-
-}
-nav ul li{
-display: flex;
-align-items: center;
-margin: 1em 0em;
-
+nav {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    position: fixed;
+    width: 100vw;
 }
 
-#logo{
-height: 4em;
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
-#logoLi{
-margin: 0em;
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 1em 0em;
 }
 
-#photosOfMe a {
+#logo {
+    height: 4em;
+}
+
+#logoContainer {
+    margin: 0em;
+}
+
+#photosLink a,
+#projectsLink a {
     text-decoration: none;
     color: var(--primary-text-color);
     padding: 0.5em;
     border: 2px solid transparent;
-} 
+}
 
-#photosOfMe a:hover{
-    border: 2px solid var(--border-color);
-    color: var(--link-hover-color);
-} 
-
-#projects a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-    padding: 0.5em;
-    border: 2px solid transparent;
-} 
-
-#projects a:hover{
+#photosLink a:hover,
+#projectsLink a:hover {
     border: 2px solid var(--border-color);
     color: var(--link-hover-color);
     text-decoration: underline;
 }
 
-div{
+div {
     height: 10em;
     width: 100%;
 }
-#bradPitt1 {
+
+#bradPittImage {
     width: 43%;
     height: auto;
 }
 
-#lightMode{
+#lightMode {
     background-color: whitesmoke;
     color: var(--primary-background-color);
-    
 }
 
-#photo1Text{
+#photo1Text {
     color: var(--primary-text-color);
+    font-size: 2em;
 }
+
 footer {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
