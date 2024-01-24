@@ -98,6 +98,9 @@ div{
     
 }
 
+#photo1Text{
+    color: var(--primary-text-color);
+}
 footer {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
