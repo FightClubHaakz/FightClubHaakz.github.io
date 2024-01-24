@@ -28,6 +28,7 @@ body {
     margin: 0;
     height: auto;
     background-image: linear-gradient(var(--darkcolor) 10%, rgb(119, 190, 213) 90%);
+    width: 100vw;
 }
 
 .wrapper {
