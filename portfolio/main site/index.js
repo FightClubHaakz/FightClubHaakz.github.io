@@ -1,18 +1,22 @@
-const LMBtn = document.getElementById("lightMode");
-LMBtn.addEventListener("click", toggleLightMode);
+// index.js
+
+const lightModeBtn = document.getElementById("lightMode");
+lightModeBtn.addEventListener("click", toggleLightMode);
 
 let isLightMode = false;
 
 function toggleLightMode() {
     isLightMode = !isLightMode; // Toggle the state
 
-    if (isLightMode === true) {
+    if (isLightMode) {
+        // Apply light mode styles
         document.body.style.filter = "invert(95%) hue-rotate(180deg)";
         document.getElementById("introBox").style.filter = "invert(95%) hue-rotate(180deg)";
-        LMBtn.textContent = "Dark Mode";
+        lightModeBtn.textContent = "Dark Mode";
     } else {
-        document.body.style.filter = "none"; // Reset the filter
-        document.getElementById("introBox").style.filter = "none"; // Reset the filter for the specific element
-        LMBtn.textContent = "Light Mode";
+        // Reset styles for dark mode
+        document.body.style.filter = "none";
+        document.getElementById("introBox").style.filter = "none";
+        lightModeBtn.textContent = "Light Mode";
     }
 }
