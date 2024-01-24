@@ -1,0 +1,202 @@
+:root {
+    --darkcolor: #1d1d42;
+    --whitecolor: #EEEEEE;
+    --bluecolor: #2f2f7a;
+
+    --primary-background-color: #1a1a1a;
+    --primary-text-color: whitesmoke;
+    --secondary-background-color: #2b2b2b;
+    --accent-color-1: #3a3a3a;
+    --accent-color-2: #757575;
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+    --button-color: #e74c3c;
+    --button-hover-color: #c0392b;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: auto;
+    background-image: linear-gradient(var(--darkcolor) 10%, rgb(119, 190, 213) 90%);
+}
+.wrapper{
+    padding-top: 4em;
+}
+nav {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 1em 0em;
+}
+
+#logo {
+    height: 4em;
+}
+
+#logoLi {
+    margin: 0em;
+}
+
+#photosOfMe a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 0.5em;
+    border: 2px solid transparent;
+}
+
+#photosOfMe a:hover {
+    border: 2px solid var(--border-color);
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+#projects a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 0.5em;
+    border: 2px solid transparent;
+}
+
+#projects a:hover {
+    border: 2px solid var(--border-color);
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+#bigBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "box1 box2 box3";
+    justify-items: center;
+    padding-bottom: 3em;
+}
+
+.box1,
+.box2,
+.box3 {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bluecolor);
+    color: var(--primary-text-color);
+}
+
+#slash,
+#EVH,
+#steveVai {
+    height: auto;
+    max-width: 70%;
+    margin: 0.5em;
+}
+
+#slashHr,
+#EVHHr,
+#steveVaiHr {
+    width: 60%;
+    border: 1px solid var(--whitecolor);
+}
+
+#slashText,
+#evhText,
+#steveVaiText {
+    font-size: 2.5em;
+    padding: 0.5em 1em 0em 1em;
+}
+
+#needMoreSpace {
+    margin-bottom: 3em;
+}
+
+#evhText {
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+.box1 p,
+.box2 p,
+.box3 p {
+    font-size: 1.15em;
+    text-align: center;
+    padding: 1.8em 1em 0em 1em;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.boxLinks {
+    color:#FF10F0;
+}
+#lightMode {
+    background-color: whitesmoke;
+    color: var(--primary-background-color);
+}
+
+.light-mode *:not(img) {
+    filter: invert(95%) hue-rotate(180deg);
+}
+footer {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (orientation: portrait) {
+    #bigBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat;
+        grid-template-areas: "box1" "box2" "box3";
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        margin: 0.5em;
+    }
+
+    .wrapper {
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    body {
+        margin: 0;
+        background-image: linear-gradient(var(--darkcolor) 0%, rgb(119, 190, 213) 50%);
+    }
+
+    .box3 {
+        margin-bottom: 0.5em 0em;
+    }
+}
+
