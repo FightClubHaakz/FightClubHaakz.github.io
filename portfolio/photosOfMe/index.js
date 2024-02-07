@@ -13,6 +13,7 @@ function toggleLightMode() {
         });
 
         LMBtn.textContent = "Dark Mode";
+        sessionStorage.lightModeEnable = true;
     } else {
         document.body.style.filter = "none"; // Reset the filter
         // Reset the filter for all elements with class "guitaristImage"
@@ -21,6 +22,13 @@ function toggleLightMode() {
         });
 
         LMBtn.textContent = "Light Mode";
+        sessionStorage.lightModeEnable = false;
     }
 }
 
+// Check if light mode is enabled in session storage
+if (sessionStorage.lightModeEnable === "true") {
+    toggleLightMode(); // Enable light mode if it was previously enabled
+} else {
+    sessionStorage.lightModeEnable = false; // Set it to false if not previously set
+}
